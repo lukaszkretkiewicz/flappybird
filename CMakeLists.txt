@@ -20,13 +20,13 @@ include_directories (
 
 #Tests
 file (GLOB TEST_SOURCES "test/*.cpp" )
-add_executable(${PROJECT_NAME}-ut  ${TEST_SOURCES})
+add_executable(${PROJECT_NAME}-ut  ${TEST_SOURCES} src/Game.cpp src/Game.hpp)
 target_link_libraries(${PROJECT_NAME}-ut gtest gmock gtest_main sfml-graphics sfml-system sfml-audio)
 enable_testing()
 add_test(NAME ${PROJECT_NAME}_test COMMAND ${PROJECT_NAME}-ut)
 
 #Main
 file (GLOB SOURCES "src/*.cpp" )
-add_executable(${PROJECT_NAME}  ${SOURCES})
+add_executable(${PROJECT_NAME}  ${SOURCES} src/Game.cpp src/Game.hpp)
 target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-system sfml-audio)
 
