@@ -1,19 +1,15 @@
-//
-// Created by Lukasz on 27.11.2021.
-//
-
+#pragma once
+#include "Bird.hpp"
 #include <SFML/Graphics.hpp>
+
 
 class Game {
 public:
-  //    Game(std::unique_ptr<sf::RenderWindow> =
-  //    std::make_unique<sf::RenderWindow>(sf::VideoMode(288, 512),
-  //                                                                                "Flappy Bird", sf::Style::Default));
-
+  Game(std::unique_ptr<Bird> = std::make_unique<Bird>());
   void run();
 
 private:
   sf::RenderWindow window{sf::VideoMode(288, 512), "Flappy Bird",
                           sf::Style::Default};
-  //    std::unique_ptr <sf::RenderWindow> window;
+  std::unique_ptr<Bird> bird;
 };
