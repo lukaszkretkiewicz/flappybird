@@ -1,3 +1,6 @@
 .idea
 cmake-build-debug
 lib_windows
+lib/googletest
+.vscode
+build/bin build/CMakeCache.txt build/CMakeFiles build/cmake_install.cmake build/CTestTestfile.cmake build/flappybird build/flappybird-ut build/lib build/Makefile build/Testing

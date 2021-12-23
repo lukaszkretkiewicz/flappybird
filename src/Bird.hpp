@@ -3,10 +3,13 @@
 
 class Bird {
 public:
+  sf::RectangleShape shape;
+
   Bird();
   void jump();
   sf::RectangleShape getShape();
 
 private:
-  sf::RectangleShape shape;
+  float width = 20;
+  float height = 20;
 };
