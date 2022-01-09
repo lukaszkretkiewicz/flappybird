@@ -9,7 +9,11 @@ public:
   void jump();
   sf::RectangleShape getShape();
 
+  sf::Texture getTexture(size_t);
+  std::array<sf::Texture, 3> getTexture();
+  
 private:
-  float width = 20;
-  float height = 20;
+  const float width = 20.0f;
+  const float height = 20.0f;
+  std::array<sf::Texture, 3> textures;
 };

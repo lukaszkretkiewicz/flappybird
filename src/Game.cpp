@@ -1,12 +1,14 @@
 #include "Game.hpp"
+#include "Animation.hpp"
 
-Game::Game(std::unique_ptr<Bird> bird) : bird(std::move(bird)) {
+Game::Game(std::unique_ptr<Bird> birdy) : bird(std::move(birdy)) {
   window.setFramerateLimit(60);
 
 }
 
 void Game::run() {
    bird->shape.setPosition(window.getSize().x / 2, window.getSize().y / 2);
+  Animation birdAnimation(bird->getTexture());
   while (window.isOpen()) {
     sf::Event evnt;
 

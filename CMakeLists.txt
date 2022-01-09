@@ -3,7 +3,7 @@ project(flappybird)
 
 set(CMAKE_CXX_STANDARD 17)
 add_compile_options(-Wall -Wextra -pedantic -Werror -DNDEBUG)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -static-libasan")
 
 add_subdirectory(lib/googletest)
 #include(cmake/boost.cmake)

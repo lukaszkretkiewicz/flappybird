@@ -9,7 +9,7 @@ public:
 
 private:
   sf::RenderWindow window{sf::VideoMode(288, 512), "Flappy Bird",
-                          sf::Style::Default};
+                          sf::Style::Close | sf::Style::Titlebar};
   std::unique_ptr<Bird> bird;
 
   void updateWindow();

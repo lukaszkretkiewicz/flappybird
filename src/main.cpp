@@ -9,5 +9,7 @@ int main() {
   //    sf::Style::Resize);
   Game game;
   game.run();
+
+  
   return 0;
 }
